@@ -278,3 +278,25 @@
 
 \RequirePackage{dirtytalk}
 
+%%%%% WATERMARK %%%%%
+
+\@ifundefined{watermarktext}{%
+  % \watermarktext is not defined - do nothing
+}{%
+  % \watermarktext is defined, now check if it's empty
+  \ifx\watermarktext\empty
+    % \watermarktext is defined but empty - do nothing
+  \else
+    % \watermarktext is defined and not empty
+    % https://tex.stackexchange.com/questions/118939/add-watermark-that-overlays-the-images
+    \AddToHook{shipout/foreground}{
+      \begin{tikzpicture}[overlay, remember picture]
+      \node[rotate=45, scale=8] at (current page) {\addfontfeature{Color=gray,Opacity=0.1}\watermarktext};
+      \end{tikzpicture}    
+    }
+  \fi
+}
+
+
+%%%%% END WATERMARK %%%%%
+

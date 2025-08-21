@@ -2,9 +2,9 @@
 % is not stored in the same directory than the main tex file
 \def\classdir{../../dibiso}
 
-\documentclass[french, 11pt]{../../dibiso/biso}
-
 \input{names_and_macros}
+
+\documentclass[french, 11pt]{../../dibiso/biso}
 
 \title{Bilan \\ Science \\ Ouverte}
 
@@ -26,18 +26,6 @@
 \begin{document}
 
 \renewcommand{\arraystretch}{1.5}
-
-%%%%% WATERMARK %%%%%
-
-% https://tex.stackexchange.com/questions/118939/add-watermark-that-overlays-the-images
-\AddToHook{shipout/foreground}{
- \begin{tikzpicture}[overlay, remember picture]
-   \node[rotate=45, scale=8] at (current page) {\addfontfeature{Color=gray,Opacity=0.1}BROUILLON};
-  \end{tikzpicture}    
-}
-
-%%%%% END WATERMARK %%%%%
-
 
 
 \maketitle
