@@ -15,7 +15,7 @@ This repository contains the following templates:
 
 ### BiSO
 
-[![report example](docs/images/biso-example/biso-example.png)](biso-example.pdf)
+[![report example](docs/images/biso-example/biso-example.png)](examples/biso-2024-draft/biso-example.pdf)
 
 
 

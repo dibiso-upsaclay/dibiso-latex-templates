@@ -1,11 +1,20 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{assets/biso}[2025 BiSO template by Romain THOMAS]
+\ProvidesClass{dibiso/biso}[2025 BiSO template by Romain THOMAS]
 
 \newcommand{\templatetype}{article}
 
-\input{assets/biso-colors}
-\input{assets/biso-dimensions}
-\input{assets/template-base}
+\RequirePackage{import} % for file imports relative to path
+
+\ifdefined\classdir
+  % nothing to do, path already defined
+\else
+  % set the path to default
+  \def\bisocolorsdir{dibiso}
+\fi
+
+\import{\classdir}{biso-colors}
+\import{\classdir}{biso-dimensions}
+\import{\classdir}{template-base}
 
 \RequirePackage[skins]{tcolorbox} %tikz overzoom for title picture
 \RequirePackage{calc} % For length calculations
@@ -48,7 +57,7 @@
       % right part of the white shade
       \fill[color=white, path fading=east]([xshift=0.299\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=0.38\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
       % logo:
-      \node [anchor=north west, xshift=\logoxpos, yshift=\logoypos] (logo) at (current page.south west) {\includegraphics[width=\logomaxw, height=\logomaxh, keepaspectratio]{assets/logo.eps}};
+      \node [anchor=north west, xshift=\logoxpos, yshift=\logoypos] (logo) at (current page.south west) {\includegraphics[width=\logomaxw, height=\logomaxh, keepaspectratio]{\classdir /logo.eps}};
       % date:
       \node [anchor=south west, xshift=\datexshift, yshift=\dateyshift] (date) at (logo.north east){\titlepagedate};
       % title:
@@ -152,23 +161,23 @@
   \begin{minipage}{6cm}
     \small
     % https://simpleicons.org/
-    \includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{assets/icons/bluesky.eps} ~ \href{https://bsky.app/profile/so-upsaclay.bsky.social}{@so-upsaclay.bsky.social}
+    \includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/bluesky.eps} ~ \href{https://bsky.app/profile/so-upsaclay.bsky.social}{@so-upsaclay.bsky.social}
     
     \medskip
     
-    \includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{assets/icons/mastodon.eps} ~ \href{https://social.sciences.re/@SO_UPSaclay}{social.sciences.re/@SO\_UPSaclay}
+    \includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/mastodon.eps} ~ \href{https://social.sciences.re/@SO_UPSaclay}{social.sciences.re/@SO\_UPSaclay}
   \end{minipage}
   
   \vspace{5mm}
   
-  \includegraphics[width=\linewidth]{assets/frise_upsaclay.eps}
+  \includegraphics[width=\linewidth]{\classdir /frise_upsaclay.eps}
   
   \vspace{5mm}
   
   \newcommand{\licenceslogo}{
-    \href{https://creativecommons.org/licenses/by/4.0/}{\includegraphics[height=\the\dimexpr 2\baselineskip \relax]{assets/icons/by.eps}}
+    \href{https://creativecommons.org/licenses/by/4.0/}{\includegraphics[height=\the\dimexpr 2\baselineskip \relax]{\classdir /icons/by.eps}}
     \hspace{3mm}
-    \href{https://www.etalab.gouv.fr/licence-ouverte-open-licence/}{\includegraphics[height=\the\dimexpr 2\baselineskip \relax]{assets/icons/etalab_licence.png}}
+    \href{https://www.etalab.gouv.fr/licence-ouverte-open-licence/}{\includegraphics[height=\the\dimexpr 2\baselineskip \relax]{\classdir /icons/etalab_licence.png}}
   }
   
   \begin{minipage}[c][\the\dimexpr 2\baselineskip \relax][c]{.47\linewidth}

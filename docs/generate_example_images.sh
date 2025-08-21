@@ -8,7 +8,7 @@ rm images/biso-example/biso-example*
 echo ""
 
 echo "Generating png single images..."
-gs -dNOPAUSE -sDEVICE=png16m -r50 -sOutputFile=images/biso-example/biso-example-%02d.png ../biso-example.pdf -c quit
+gs -dNOPAUSE -sDEVICE=png16m -r50 -sOutputFile=images/biso-example/biso-example-%02d.png ../examples/biso-2024-draft/biso-example.pdf -c quit
 echo "Done."
 echo ""
 

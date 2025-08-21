@@ -216,7 +216,7 @@
   % lualatex version
   \AddToShipoutPictureBG{
     \AtPageLowerLeft{
-      \saveimageresource{./assets/background.pdf}
+      \saveimageresource{\classdir /background.pdf}
       % if this is the last page of the document
       \ifthenelse{\thepage = \pageref{LastPage}}
         {
@@ -232,7 +232,7 @@
           {
             % add background
             \begin{tikzpicture}[remember picture,overlay,every node/.style={inner sep=0,outer sep=0}]
-              \node[anchor=north west] at (current page.north west){\includegraphics[width=\paperwidth, page=\thepage]{assets/background.pdf}};
+              \node[anchor=north west] at (current page.north west){\includegraphics[width=\paperwidth, page=\thepage]{\classdir /background.pdf}};
             \end{tikzpicture}
           }
         }
