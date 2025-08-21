@@ -1,0 +1,340 @@
+%% needed for the template to find the class dir when the class folder
+%% is not stored in the same directory than the main tex file
+\def\classdir{../../dibiso}
+
+\input{names_and_macros}
+
+\documentclass[french, 11pt]{../../dibiso/biso}
+
+\title{Bilan \\ Science \\ Ouverte}
+
+\author{Direction des bibliothèques, de l’information et de la science ouverte}
+
+\date{Année \reportyear}
+
+\subtitle{\textbf{Laboratoire \labacronym} \\
+  \medskip
+  \labfullname
+}
+
+% Remplacez Reporter Name par votre nom :
+\reporter{Reporter Name}
+% Remplacez reporter.email@example.com par votre email :
+\reporteremail{reporter.email@example.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENT REMPLIR LE BISO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Commenter des parties à exclure :                                           %
+% Pour commenter des sections que vous ne souhaitez pas inclure dans le       %
+% rapport final, vous pouvez utiliser le symbole % au début de chaque ligne   %
+% que vous souhaitez exclure. Cela peut vous servir à ne pas afficher des     %
+% sections du rapports que vous ne jugez pas appropriées pour le laboratoire. %
+%                                                                             %
+%                                                                             %
+% Créer une liste à puces :                                                   %
+% Pour créer une liste à puces, utilisez l'environnement itemize. Voici un    %
+% exemple :                                                                   %
+% \begin{itemize}                                                             %
+%     \item Premier élément de la liste                                       %
+%     \item Deuxième élément de la liste                                      %
+%     \item Troisième élément de la liste                                     %
+% \end{itemize}                                                               %
+%                                                                             %
+%                                                                             % 
+% Mettre du texte en gras :                                                   %
+% Pour mettre du texte en gras, utilisez la commande \textbf{}. Par exemple : %
+% Voici un exemple de \textbf{texte en gras}.                                 %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENT REMPLIR LE BISO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+
+
+\section{Introduction}
+
+% Ecrire l'introduction ci-dessous :
+
+
+
+
+
+% Fin de l'introduction
+
+\pagebreak
+
+\section{Liste des revues}
+
+TOTO: add figure
+%{
+%  \footnotesize
+%  \input{figures/journals_table.tex}
+%}
+
+% Ecrire un commentaire sur la liste des revues ci-dessous :
+
+
+
+
+
+% Fin de la liste des revues
+
+\pagebreak
+
+\section{Liste des conférences}
+
+\begin{figure}[!h]
+  \includegraphics[width=\textwidth]{figures/conferences.pdf}
+  \centering
+  \caption{Conférences}
+  \label{fig_conferences}
+\end{figure}
+
+% Ecrire un commentaire sur la liste des conférences ci-dessous :
+
+
+
+
+
+% Fin de la liste des conférences
+
+
+\pagebreak
+
+\section{Liste des chapitres}
+
+{
+  \footnotesize
+  \input{figures/chapters.tex}
+}
+
+% Ecrire un commentaire sur la liste des chapitres ci-dessous :
+
+
+
+
+
+% Fin de la liste des chapitres
+
+\pagebreak
+
+\section{Typologie de la production scientifique}
+
+\begin{figure}[!h]
+  \includegraphics[width=\textwidth]{figures/works_type.pdf}
+  \centering
+  \caption{Types de documents}
+  \label{fig_doc_type}
+\end{figure}
+
+% Ecrire un commentaire sur la typologie de la production scientifique ci-dessous :
+
+
+
+
+
+% Fin de la typologie de la production scientifique
+
+\pagebreak
+
+\section{Articles et Communication de congrès en accès libre} % Evolution sur une période de 5 ans (2020-2024)
+
+\begin{figure}[!h]
+  \includegraphics[width=\textwidth]{figures/open_access_works.pdf}
+  \caption{Statut des accès ouverts des travaux sur la période \oaworksperiod}
+  \label{fig_open_access_works}
+\end{figure}
+
+% Ecrire un commentaire sur les articles et communication de congrès en accès libre ci-dessous :
+
+
+
+
+
+% Fin des articles et communication de congrès en accès libre
+
+\pagebreak
+
+\section{Carte des collaborations internationales}
+
+{\collaborationsnb} collaborations parmi {\institutionsnb} institutions dans {\countriesnb} pays d'après la liste des articles avec un DOI dans HAL et les données de collaboration d'OpenAlex.
+
+\begin{figure}[!h]
+  \hspace{-.1\textwidth}\includegraphics[width=1.2\textwidth]{figures/collaboration_map_world.pdf}
+  \caption{Collaborations internationales hors France - Données : publications renseignées dans HAL avec un DOI en utilisant les métadonnées d'OpenAlex}
+  \label{fig_collab_map}
+\end{figure}
+
+% Ecrire un commentaire sur la carte des collaborations internationales ci-dessous :
+
+
+
+
+
+% Fin de la carte des collaborations internationales
+
+\pagebreak
+
+\section{Carte des collaborations internationales - Focus sur l’Europe}
+
+\begin{figure}[!h]
+  \includegraphics[width=\textwidth]{figures/collaboration_map_europe.pdf}
+  \caption{Collaborations internationales hors France en 2024 - Zoom sur l'europe - Données : publications renseignées dans HAL avec un DOI en utilisant les métadonnées d'OpenAlex}
+  \label{fig_collab_map_europe}
+\end{figure}
+
+% Ecrire un commentaire sur la carte des collaborations internationales - Focus sur l’Europe ci-dessous :
+
+
+
+
+
+% Fin de la carte des collaborations internationales - Focus sur l’Europe
+
+\pagebreak
+
+\section{Collaborations internationales par établissements}
+
+\begin{figure}[!h]
+  \includegraphics[width=\textwidth]{figures/collaboration_names.pdf}
+  \caption{Collaborations internationales hors France en 2024 - Données : Nom des institutions renseignées dans HAL}
+  \label{fig_collab_names}
+\end{figure}
+
+% Ecrire un commentaire sur les collaborations internationales par établissements ci-dessous :
+
+
+
+
+
+% Fin des collaborations internationales par établissements
+
+\pagebreak
+
+\section{Collaborations (non académique) avec le secteur privé}
+
+TODO: add figure
+
+% Ecrire un commentaire sur les collaborations (non académique) avec le secteur privé  ci-dessous :
+
+
+
+
+
+% Fin des collaborations (non académique) avec le secteur privé
+
+\pagebreak
+
+\section{Publications liées à des projets européens}
+
+\begin{figure}[!h]
+  \includegraphics[width=.8\textwidth]{figures/european_projects.pdf}
+  \centering
+  \caption{Projets Européens}
+  \label{fig_eu_projects}
+\end{figure}
+
+% Ecrire un commentaire sur les publications liées à des projets européens ci-dessous :
+
+
+
+
+
+% Fin des publications liées à des projets européens
+
+
+\section{Publications liées à des projets ANR}
+
+\begin{figure}[!h]
+  \includegraphics[width=.8\textwidth]{figures/anr_projects.pdf}
+  \centering
+  \caption{Projets ANR}
+  \label{fig_anr_projects}
+\end{figure}
+
+% Ecrire un commentaire sur les publications liées à des projets ANR ci-dessous :
+
+
+
+
+
+% Fin des publications liées à des projets ANR
+
+\pagebreak
+
+\section{Données - jeux de données partagés}
+
+% Ecrire un commentaire sur les données - jeux de données partagés ci-dessous :
+
+
+
+
+
+% Fin des données - jeux de données partagés
+
+\section{Logiciels partagés}
+
+% Ecrire un commentaire sur les Logiciels partagés ci-dessous :
+
+
+
+
+
+% Fin des Logiciels partagés
+
+\section{Cahiers de laboratoire partagés}
+
+% Ecrire un commentaire sur les cahiers de laboratoire partagés ci-dessous :
+
+
+
+
+
+% Fin des cahiers de laboratoire partagés
+
+\pagebreak
+
+\section{Les atouts du Laboratoire dans son engagement pour la science ouverte}
+
+% Ecrire un commentaire sur les atouts du Laboratoire dans son engagement pour la science ouverte ci-dessous :
+
+
+
+
+
+% Fin des atouts du Laboratoire dans son engagement pour la science ouverte 
+
+
+\section{Préconisations, pour aller plus loin}
+
+% Ecrire un commentaire sur les préconisations, pour aller plus loin ci-dessous :
+
+
+
+
+
+% Fin des préconisations, pour aller plus loin
+
+\vfill
+
+\paragraph{Rappel :} la loi pour la République Numérique permet aux auteurs travaillant dans une institution publique en France depuis 2016, de partager le postprint sur HAL, avec un embargo de 6 mois pour les disciplines STM et 1 an pour les SHS.
+
+Des formations, des accompagnements peuvent être proposées par votre référent recherche pour guider les chercheurs. 
+
+
+
+
+\makelastpagereport
+ 
+\end{document}
