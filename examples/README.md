@@ -2,7 +2,7 @@
 
 Example reports made with the LaTeX DiBISO templates.
 
-You can freely use these templates under the LPPL 1.3c or GPL 3.0 license, without using the Université Paris-Saclay logos.
+You can freely use the code of these templates under the LPPL 1.3c or GPL 3.0 license, excluding the Université Paris-Saclay logos and visual style guide. I you want to reuse these templates, you will need to change the layout and/or colors and remove the logos so the produced document cannot be identified as part of the Université Paris-Saclay communication.
 
 Université Paris-Saclay examples:
 
