@@ -42,10 +42,10 @@ endobj
 <x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
 <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
 <rdf:Description rdf:about="" xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 10.02.1'/>
-<rdf:Description rdf:about="" xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2025-08-20T14:53:46+02:00</xmp:ModifyDate>
-<xmp:CreateDate>2025-08-20T14:53:46+02:00</xmp:CreateDate>
+<rdf:Description rdf:about="" xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2025-08-22T15:01:41+02:00</xmp:ModifyDate>
+<xmp:CreateDate>2025-08-22T15:01:41+02:00</xmp:CreateDate>
 <xmp:CreatorTool>cairo 1.18.0 (https://cairographics.org)</xmp:CreatorTool></rdf:Description>
-<rdf:Description rdf:about="" xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:4256ced0-b5e1-11fb-0000-92fef265bfda'/>
+<rdf:Description rdf:about="" xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:b2499515-b774-11fb-0000-92fef265bfda'/>
 <rdf:Description rdf:about="" xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>Mastodon</rdf:li></rdf:Alt></dc:title></rdf:Description>
 </rdf:RDF>
 </x:xmpmeta>
@@ -56,8 +56,8 @@ endstream
 endobj
 2 0 obj
 <</Producer(GPL Ghostscript 10.02.1)
-/CreationDate(D:20250820145346+02'00')
-/ModDate(D:20250820145346+02'00')
+/CreationDate(D:20250822150141+02'00')
+/ModDate(D:20250822150141+02'00')
 /Creator(cairo 1.18.0 \(https://cairographics.org\))
 /Title(Mastodon)>>endobj
 xref
@@ -72,7 +72,7 @@ xref
 0000001388 00000 n 
 trailer
 << /Size 8 /Root 1 0 R /Info 2 0 R
-/ID [<FD8F74F2C9C03E5A63302992EED7F672><FD8F74F2C9C03E5A63302992EED7F672>]
+/ID [<B4BF2607508A21347CCDB5B5FB5B0A86><B4BF2607508A21347CCDB5B5FB5B0A86>]
 >>
 startxref
 2865
