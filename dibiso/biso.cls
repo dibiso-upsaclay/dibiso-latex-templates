@@ -121,9 +121,11 @@
   \section*{Code:}
 
   \begin{description}[leftmargin=0cm]
-    \item[Analyses et visualisations:] \url{https://github.com/dibiso-upsaclay/???}
+    \item[Analyses et visualisations:] \url{https://github.com/dibiso-upsaclay/dibisoplot}
     \item[Modèle \LaTeX:] \url{https://github.com/dibiso-upsaclay/dibiso-latex-templates}
-    \item[Génération du rapport:] \url{https://github.com/dibiso-upsaclay/???}
+    \item[Génération du rapport:] \url{https://github.com/dibiso-upsaclay/dibisoreporting}
+    \item[Application web:] \url{https://github.com/dibiso-upsaclay/dibiso-reporting-webapp}
+    \item[API app web:] \url{https://github.com/dibiso-upsaclay/dibiso-reporting-api}
   \end{description}
 }
 
