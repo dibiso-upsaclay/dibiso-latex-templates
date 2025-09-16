@@ -18,6 +18,7 @@
 
 \RequirePackage[skins]{tcolorbox} %tikz overzoom for title picture
 \RequirePackage{calc} % For length calculations
+\RequirePackage{emoji}
 
 
 \RequirePackage{pgfplots}
@@ -96,15 +97,13 @@
   \section*{Source des données:}
   
   \begin{description}[leftmargin=0cm]
-    \conditionalitem{\href{https://hal.science/}{HAL}:}{fig_conferences,fig_doc_type,fig_open_access_works,fig_collab_map,fig_collab_map_europe,fig_collab_names,fig_eu_projects,fig_anr_projects}{tab_journals,tab_chapters}
+    \conditionalitem{\href{https://hal.science/}{HAL}:}{fig_jorunals_hal,fig_conferences,fig_doc_type,fig_open_access_works,fig_collab_map,fig_collab_map_europe,fig_collab_names,fig_private_collab,fig_eu_projects,fig_anr_projects}{tab_chapters,tab_journals}
 
     \conditionalitem{\href{https://openalex.org/}{OpenAlex}:}{fig_collab_map,fig_collab_map_europe}{}
 
-    \conditionalitem{\href{https://scanr.enseignementsup-recherche.gouv.fr/}{scanR}:}{fig_collab_prive}{}
+    \conditionalitem{\href{https://scanr.enseignementsup-recherche.gouv.fr/}{scanR}:}{fig_private_collab}{}
 
     \conditionalitem{\href{https://barometredelascienceouverte.esr.gouv.fr/}{Baromètre français de la Science Ouverte}:}{}{tab_journals}
-
-    \conditionalitem{\href{https://github.com/dibiso-upsaclay/???}{BiblioHub}:}{}{tab_journals}
     
     % Add fallback item if no items were added
     \ifnum\value{descriptionitems}=0
@@ -134,7 +133,7 @@
   \vspace{10mm}
 
   Rédaction : \thereporter \\
-  Conception : Delphine Le Piolet, Laili Rahimie, Romain Thomas \\
+  Conception : Henri Bretel, Delphine Le Piolet, Laili Rahimie, Romain Thomas \\
   Programmation : Romain Thomas
 }
 
