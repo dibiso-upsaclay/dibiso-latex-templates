@@ -24,7 +24,7 @@
   % nothing to do, path already defined
 \else
   % set the path to default
-  \def\bisocolorsdir{dibiso}
+  \def\classdir{dibiso}
 \fi
 
 \import{\classdir}{biso-colors}
