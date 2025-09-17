@@ -33,7 +33,6 @@
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% LAST PAGE %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,8 +97,8 @@
   \vspace{10mm}
 
   Rédaction : \thereporter \\
-  Conception : Henri Bretel, Delphine Le Piolet, Laili Rahimie, Romain Thomas \\
-  Programmation : Romain Thomas
+  Conception : Henri Bretel \orcidlink{0000-0001-6922-0915}, Delphine Le Piolet \orcidlink{0000-0001-9756-4408}, Laili Rahimie \orcidlink{0009-0007-7119-215X}, Romain Thomas \orcidlink{0009-0008-9900-1930} \\
+  Programmation : Romain Thomas \orcidlink{0009-0008-9900-1930}
 }
 
 
