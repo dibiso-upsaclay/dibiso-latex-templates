@@ -16,24 +16,6 @@
 \import{\classdir}{biso-dimensions}
 \import{\classdir}{template-base}
 
-\RequirePackage[skins]{tcolorbox} %tikz overzoom for title picture
-\RequirePackage{calc} % For length calculations
-\RequirePackage{emoji}
-
-
-\RequirePackage{pgfplots}
-
-\usetikzlibrary{pgfplots.colorbrewer}
-\usetikzlibrary{pgfplots.colormaps}
-\usetikzlibrary{positioning}
-\usetikzlibrary{shapes.misc}
-\usetikzlibrary{calc}
-\usetikzlibrary{fadings}
-
-
-\pgfplotsset{compat=1.18}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% TITLE PAGE %%%%%%%%%%

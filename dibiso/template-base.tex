@@ -22,8 +22,50 @@
 \ProcessOptions\relax
 \LoadClass[]{\templatetype}
 
-% Load babel (it will use the options passed above)
-\RequirePackage{babel}
+
+% Packages:
+\RequirePackage{babel} % Load babel (it will use the options passed above)
+\RequirePackage{booktabs} % provides table rules
+\RequirePackage{calc} % For length calculations
+\RequirePackage{dirtytalk}
+\RequirePackage{emoji}
+\RequirePackage{enumitem} % for description margin adjustment
+\RequirePackage{eso-pic}  % run stuff before anything (used to place the background before everything else)
+\RequirePackage[bottom]{footmisc}
+\RequirePackage{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{ifthen}
+\RequirePackage{lastpage}
+\RequirePackage{lipsum}
+\RequirePackage{longtable}
+\RequirePackage{makecell}
+\RequirePackage{parskip}
+\RequirePackage{pgfplots}
+\RequirePackage{setspace}
+\RequirePackage[skins]{tcolorbox} %tikz overzoom for title picture
+\RequirePackage{tikz}
+\RequirePackage{titlesec}
+\RequirePackage{url}
+\usetikzlibrary{colorbrewer}
+
+% https://tex.stackexchange.com/questions/157389/how-to-center-column-values-in-a-table
+\RequirePackage{array} % for tables content alignement
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+\usetikzlibrary{pgfplots.colorbrewer}
+\usetikzlibrary{pgfplots.colormaps}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{calc}
+\usetikzlibrary{fadings}
+
+\pgfplotsset{compat=1.18}
+
+
+
+
 
 % Language-specific customizations
 \if@french
@@ -150,13 +192,6 @@
 % set title font
 \newcommand{\titlefont}{\fontseries{l}}
 
-\RequirePackage{parskip}
-
-\RequirePackage{titlesec}
-\RequirePackage{geometry}
-\RequirePackage{setspace}
-\RequirePackage{tikz}
-\usetikzlibrary{colorbrewer}
 
 \DeclareRobustCommand\subtitle[1]{\gdef\@subtitle{#1}}
 \subtitle{}
@@ -182,13 +217,6 @@
 \renewcommand{\labelitemiii}{$\bulletpointcolor{\diamond}$}
 \renewcommand{\labelitemiv}{$\bulletpointcolor{\ast}$}
 
-
-
-
-\RequirePackage{eso-pic}  % run stuff before anything (used to place the background before everything else)
-\RequirePackage{graphicx}
-\RequirePackage{ifthen}
-\RequirePackage{lastpage}
 
 % define command to set the background of the last page
 \newcommand{\makelastpage}{
@@ -262,21 +290,6 @@
   {1.7ex}
 
 
-\RequirePackage{hyperref}
-\RequirePackage{url}
-
-% https://tex.stackexchange.com/questions/157389/how-to-center-column-values-in-a-table
-\RequirePackage{array} % for tables content alignement
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-
-\RequirePackage{lipsum}
-\RequirePackage{enumitem} % for description margin adjustment
-
-\RequirePackage{longtable}
-\RequirePackage{makecell}
-\RequirePackage{booktabs} % provides table rules
-
-\RequirePackage{dirtytalk}
 
 %%%%% WATERMARK %%%%%
 
