@@ -1,7 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%                                    %%%%%%%%%%
+%%%%%%%%%%  You can reuse this work under:    %%%%%%%%%%
+%%%%%%%%%%  LPPL-1.3c OR GPL-3.0-only         %%%%%%%%%%
+%%%%%%%%%%                                    %%%%%%%%%%
+%%%%%%%%%%  Romain THOMAS 2025                %%%%%%%%%%
+%%%%%%%%%%  contact@romainthomas.net          %%%%%%%%%%
+%%%%%%%%%%  DiBISO - Université Paris-Saclay  %%%%%%%%%%
+%%%%%%%%%%                                    %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dibiso/biso}[2025 BiSO template by Romain THOMAS]
 
 \newcommand{\templatetype}{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% IMPORTS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{import} % for file imports relative to path
 
@@ -17,39 +32,7 @@
 \import{\classdir}{template-base}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% TITLE PAGE %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% date:
-\newcommand{\titlepagedate}{\datefontsize\fontseries{b}\selectfont\titlecolor \@date \par}
-
-\DeclareRobustCommand\titlebackgroundpicture[1]{\gdef\@titlebackgroundpicture{#1}}
-\renewcommand*{\maketitle}{
-  \begin{titlepage}
-  %  \setcounter{page}{0}
-    \begin{tikzpicture}[remember picture, overlay, every node/.style={inner sep=0,outer sep=0}]
-      % lef t laser:
-      % left part of the shading
-      \shade[left color=titlepagegradientcolora, right color=titlepagegradientcolorb, shading angle=0](current page.north west) rectangle ([xshift=0.5\titlepagelaserwidth]current page.south west);
-      % The yshift=0.2cm and yshift=-0.2cm are here to fix an alignement bug
-      % right part of the shading with the fading on the right
-      \shade[left color=titlepagegradientcolora, right color=titlepagegradientcolorb, shading angle=0, path fading=east]([xshift=0.49\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
-      % left part of the white shade
-      \fill[color=white, path fading=west]([xshift=0.22\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=0.301\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
-      % right part of the white shade
-      \fill[color=white, path fading=east]([xshift=0.299\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=0.38\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
-      % logo:
-      \node [anchor=north west, xshift=\logoxpos, yshift=\logoypos] (logo) at (current page.south west) {\includegraphics[width=\logomaxw, height=\logomaxh, keepaspectratio]{\classdir /logo.eps}};
-      % date:
-      \node [anchor=south west, xshift=\datexshift, yshift=\dateyshift] (date) at (logo.north east){\titlepagedate};
-      % title:
-      \node [anchor=south west, text width=\titletextwidth, xshift=\titlexshift, yshift=\titleyshift] (title) at (date.north west) {\scalebox{4}{\parbox{0.25\titletextwidth}{\titlefont\titlefontsize\selectfont\titlecolor\@title}} \par};
-      % subtitle:
-      \node [text width=\subtitletextwidth] (subtitle) at (\subtitlexpos, \subtitleypos) {\subtitlefontsize\selectfont\titlecolor\raggedright \@subtitle \par};
-    \end{tikzpicture}
-  \end{titlepage}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% LAST PAGE %%%%%%%%%%

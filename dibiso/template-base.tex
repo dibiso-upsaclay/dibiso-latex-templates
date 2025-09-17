@@ -1,4 +1,19 @@
-% Language options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%                                    %%%%%%%%%%
+%%%%%%%%%%  You can reuse this work under:    %%%%%%%%%%
+%%%%%%%%%%  LPPL-1.3c OR GPL-3.0-only         %%%%%%%%%%
+%%%%%%%%%%                                    %%%%%%%%%%
+%%%%%%%%%%  Romain THOMAS 2025                %%%%%%%%%%
+%%%%%%%%%%  contact@romainthomas.net          %%%%%%%%%%
+%%%%%%%%%%  DiBISO - Université Paris-Saclay  %%%%%%%%%%
+%%%%%%%%%%                                    %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% LANGUAGE OPTIONS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newif\if@french
 \newif\if@english
 
@@ -23,7 +38,10 @@
 \LoadClass[]{\templatetype}
 
 
-% Packages:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% PACKAGES %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \RequirePackage{babel} % Load babel (it will use the options passed above)
 \RequirePackage{booktabs} % provides table rules
 \RequirePackage{calc} % For length calculations
@@ -64,10 +82,12 @@
 \pgfplotsset{compat=1.18}
 
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% LANGUAGE SETUP %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Language-specific customizations
+
 \if@french
   \addto\captionsfrench{%
     \renewcommand{\contentsname}{Sommaire}%
@@ -79,6 +99,10 @@
   }
 \fi
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% CUSTOM COMMANDS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % add command to define subtitle
 \DeclareRobustCommand\subtitle[1]{\gdef\@subtitle{#1}}
@@ -92,7 +116,13 @@
 \newcommand{\@reporteremail}{}
 \newcommand{\thereporteremail}{\@reporteremail}
 
-%% Define commands to only cite labels defined in the document and ignore undefined labels
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% REFERENCES ON LAST PAGE %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define commands to only cite labels defined in the document and ignore undefined labels
+% This allows to automatically hide hidden or removed figures and tables
 
 % Global variables to store results
 \newcommand{\@figresult}{}
@@ -183,13 +213,16 @@
 }
 
 
-% font
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% FONT %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \RequirePackage{fontspec}
 \RequirePackage[default,oldstyle,scale=0.95]{opensans} %% Alternatively
 %% use the option 'defaultsans' instead of 'default' to replace the
 %% sans serif font only.
 
-% set title font
+% set title font series
 \newcommand{\titlefont}{\fontseries{l}}
 
 
@@ -201,7 +234,11 @@
 \titleleftlogo{assets/logo.eps}
 
 
-%%Margins
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% MARGINS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \geometry{
   a4paper,
   left=30mm,
@@ -211,12 +248,54 @@
 }
 
 
-% bullet points color
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% BULLET POINTS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% set bullet points color
 \renewcommand{\labelitemi}{$\bulletpointcolor{\bullet}$}
 \renewcommand{\labelitemii}{$\bulletpointcolor{\cdot}$}
 \renewcommand{\labelitemiii}{$\bulletpointcolor{\diamond}$}
 \renewcommand{\labelitemiv}{$\bulletpointcolor{\ast}$}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% TITLE PAGE %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareRobustCommand\titlebackgroundpicture[1]{\gdef\@titlebackgroundpicture{#1}}
+\renewcommand*{\maketitle}{
+  \begin{titlepage}
+  %  \setcounter{page}{0}
+    \begin{tikzpicture}[remember picture, overlay, every node/.style={inner sep=0,outer sep=0}]
+      % left laser:
+      % left part of the shading
+      \shade[left color=titlepagegradientcolora, right color=titlepagegradientcolorb, shading angle=0](current page.north west) rectangle ([xshift=0.5\titlepagelaserwidth]current page.south west);
+      % The yshift=0.2cm and yshift=-0.2cm are here to fix an alignement bug
+      % right part of the shading with the fading on the right
+      \shade[left color=titlepagegradientcolora, right color=titlepagegradientcolorb, shading angle=0, path fading=east]([xshift=0.49\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
+      % left part of the white shade
+      \fill[color=white, path fading=west]([xshift=0.22\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=0.301\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
+      % right part of the white shade
+      \fill[color=white, path fading=east]([xshift=0.299\titlepagelaserwidth, yshift=0.2cm]current page.north west) rectangle ([xshift=0.38\titlepagelaserwidth, yshift=-0.2cm]current page.south west);
+      % logo:
+      \node [anchor=north west, xshift=\logoxpos, yshift=\logoypos] (logo) at (current page.south west) {\includegraphics[width=\logomaxw, height=\logomaxh, keepaspectratio]{\classdir /logo.eps}};
+      % date:
+      \node [anchor=south west, xshift=\datexshift, yshift=\dateyshift] (date) at (logo.north east){\datefontsize\fontseries{b}\selectfont\titlecolor \@date \par};
+      % title:
+      \node [anchor=south west, text width=\titletextwidth, xshift=\titlexshift, yshift=\titleyshift] (title) at (date.north west) {\scalebox{4}{\parbox{0.25\titletextwidth}{\titlefont\titlefontsize\selectfont\titlecolor\@title}} \par};
+      % subtitle:
+      \node [text width=\subtitletextwidth] (subtitle) at (\subtitlexpos, \subtitleypos) {\subtitlefontsize\selectfont\titlecolor\raggedright \@subtitle \par};
+    \end{tikzpicture}
+  \end{titlepage}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% LAST PAGE %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % define command to set the background of the last page
 \newcommand{\makelastpage}{
@@ -235,6 +314,10 @@
   \thispagestyle{empty}
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% BACKGROUND %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Add the background to every page until running out of pages in the background page
 % reset titlepage environment to start page numbering on title page
@@ -278,6 +361,11 @@
 %}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% SECTIONS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% set sections style
 \titleformat{\section}
   {\sectiontitlecolor\LARGE\fontseries{b}\selectfont} % Format of the section title
   {\thesection} % Section number
@@ -291,7 +379,9 @@
 
 
 
-%%%%% WATERMARK %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% WATERMARK %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \@ifundefined{watermarktext}{%
   % \watermarktext is not defined - do nothing
@@ -309,7 +399,3 @@
     }
   \fi
 }
-
-
-%%%%% END WATERMARK %%%%%
-
