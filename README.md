@@ -24,7 +24,7 @@ To compile the templates, you need to use LuaLaTeX.
 
 ### BiSO
 
-[![report example](docs/images/biso-example/biso-example.png)](examples/biso-2024-draft/biso-example.pdf)
+[![report example](docs/images/biso-example/biso-example.png)](examples/biso/biso-main.pdf)
 
 
 
