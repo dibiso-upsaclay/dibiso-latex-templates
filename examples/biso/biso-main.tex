@@ -19,6 +19,8 @@
 \input{names_and_macros}
 
 \documentclass[french, 11pt]{dibiso/biso}
+\usepackage{tikzpagenodes} % For accessing text area coordinates
+\usepackage[absolute,overlay]{textpos}
 
 \title{Bilan \\ Science \\ Ouverte}
 
@@ -209,7 +211,25 @@ La loi pour la République Numérique permet aux auteurs travaillant dans une in
 
 \pagebreak
 
-\section{Liste des revues et les voies d'accès ouvert repérés dans le BSO}
+%\definecolor{myyellow}{RGB}{255, 255, 0}
+%\definecolor{myblue}{RGB}{0, 0, 255}
+
+%\begin{textblock*}{\textwidth}(0pt, 0pt) % Position at the top of the page
+%    \begin{tikzpicture}
+%        \node[fill=myyellow, draw=none, rounded corners=5pt, inner sep=2pt] at  ([xshift=\oddsidemargin, yshift=-1in]current page.north west) {
+%            \textcolor{myblue}{\textbf{Version [bêta]}}
+%        };
+%    \end{tikzpicture}
+%\end{textblock*}
+
+%\begin{tikzpicture}[remember picture, overlay]
+%    \node[fill=myyellow, draw=none, rounded corners=5pt, inner sep=2pt, anchor=north west] at (current page text area.north west) {
+%        \textcolor{myblue}{\textbf{Version [bêta]}}
+%    };
+%\end{tikzpicture}
+
+
+\section[Version bêta]{Liste des revues et les voies d'accès ouvert repérés dans le BSO}
 
 Ce tableau utilise des données du Baromètre français de la Science Ouverte. Ces données sont compilées le dernier trimestre de chaque année (généralement en décembre), sur les données de l'année précédente. Ainsi, le tableau montre le nombre de publications en accès ouvert lors du trimestre 2024Q4.
 
@@ -264,7 +284,7 @@ La colonne \say{APC payés} indique le montant de frais APC détecté comme pay�
 
 \pagebreak
 
-\section{Collaborations (non académique) avec le secteur privé}
+\section[Version bêta]{Collaborations (non académique) avec le secteur privé}
 
 \begin{figure}[!h]
   \includegraphics[width=\textwidth]{figures/private_sector_collaborations.pdf}
