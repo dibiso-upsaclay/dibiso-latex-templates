@@ -67,6 +67,8 @@
 \RequirePackage{titlesec}
 \RequirePackage{url}
 
+\RequirePackage{letltxmacro} % For \LetLtxMacro
+
 % https://tex.stackexchange.com/questions/157389/how-to-center-column-values-in-a-table
 \RequirePackage{array} % for tables content alignement
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
@@ -367,16 +369,46 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % set sections style
+\newcommand*\sectionlabel{}
 \titleformat{\section}
   {\sectiontitlecolor\LARGE\fontseries{b}\selectfont} % Format of the section title
   {\thesection} % Section number
   {1em} % Space between the number and the title
-  {} % Code before the title
+  {
+    \if\sectionsigntext0
+      % no text sign
+      % don't add the sign
+    \else
+      \begin{tikzpicture}[remember picture, overlay]
+        \node[draw=betabordercolor, fill=betabackgroundcolor, rounded corners=5pt, inner sep=5pt, anchor=south west, yshift=\baselineskip] {
+          \textcolor{betatextcolor}{\normalsize \sectionsigntext}
+        };
+      \end{tikzpicture}
+    \fi
+  } % Code before the title
 
 \titlespacing*{\section}
   {0pt}
   {4ex}
   {1.7ex}
+
+\newcommand{\sectionsigntext}{}
+
+% redifine the section command to add optional parameter for beta version sign
+% s = star, O{0} = optional with default to 0, m = title
+\NewDocumentCommand{\extendedsection}{sO{0}m}{
+  \renewcommand{\sectionsigntext}{#2}
+  \IfBooleanTF{#1}{
+    \latexsection*{#3}
+  }{
+    \latexsection{#3}
+  }
+}
+
+\AtBeginDocument{
+  \LetLtxMacro{\latexsection}{\section}
+  \LetLtxMacro{\section}{\extendedsection}
+}
 
 
 
