@@ -96,7 +96,8 @@
 \newcommand{\makelastpageauthors}{
   \vspace{10mm}
 
-  Rédaction : \thereporter \\
+  % hide reporter name if not specified
+  \ifthenelse{\equal{\thereporter}{}}{}{Rédaction : \thereporter \\}
   Conception : Henri Bretel \orcidlink{0000-0001-6922-0915}, Delphine Le Piolet \orcidlink{0000-0001-9756-4408}, Laili Rahimie \orcidlink{0009-0007-7119-215X}, Romain Thomas \orcidlink{0009-0008-9900-1930} \\
   Programmation : Romain Thomas \orcidlink{0009-0008-9900-1930}
 }
@@ -175,4 +176,27 @@
   \makelastpagefooter
 }
 
+
+\newcommand{\makelastpagebiblio}{
+  \pagebreak
+  
+  \thispagestyle{empty}
+  
+  \section*{Source des données:}
+  \begin{description}
+    \item[\href{https://hal.science/}{HAL}:] Références
+  \end{description}
+  \vspace{-1ex}
+  Données téléchargées le : \datafetchdate
+  
+  \makelastpagecode
+  
+  \vfill
+  \vfill
+  \vfill
+  
+  \makelastpageauthors
+  
+  \makelastpagefooter
+}
 
