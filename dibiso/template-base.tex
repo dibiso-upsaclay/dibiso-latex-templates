@@ -231,6 +231,8 @@
 
 \DeclareRobustCommand\subtitle[1]{\gdef\@subtitle{#1}}
 \subtitle{}
+\DeclareRobustCommand\titledescription[1]{\gdef\@titledescription{#1}}
+\titledescription{}
 \DeclareRobustCommand\titlerightlogo[1]{\gdef\@titlerightlogo{#1}}
 \titlerightlogo{assets/logo.eps}
 \DeclareRobustCommand\titleleftlogo[1]{\gdef\@titleleftlogo{#1}}
@@ -290,6 +292,8 @@
       \node [anchor=south west, xshift=\datexshift, yshift=\dateyshift] (date) at (logo.north east){\datefontsize\fontseries{b}\selectfont\titlecolor \@date \par};
       % title:
       \node [anchor=south west, text width=\titletextwidth, xshift=\titlexshift, yshift=\titleyshift] (title) at (date.north west) {\scalebox{4}{\parbox{0.25\titletextwidth}{\titlefont\titlefontsize\selectfont\titlecolor\@title}} \par};
+      % title description:
+      \node [anchor=north west, text width=\titledescriptiontextwidth, xshift=\titledescriptionxshift, yshift=\titledescriptionyshift] (titledescription) at (logo.south east) {\titledescriptionfontsize\selectfont\titlecolor\raggedright \@titledescription \par};
       % subtitle:
       \node [text width=\subtitletextwidth] (subtitle) at (\subtitlexpos, \subtitleypos) {\subtitlefontsize\selectfont\titlecolor\raggedright \@subtitle \par};
     \end{tikzpicture}
