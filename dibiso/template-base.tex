@@ -344,20 +344,23 @@
           \makelastpage
         }
         {
-          % if the background file not has enough pages
-          \ifthenelse{\numexpr\thepage+1 > \the\lastsavedimageresourcepages}
-          {
-            % not background
-          }
-          {
-            % add background
-            \begin{tikzpicture}[remember picture,overlay,every node/.style={inner sep=0,outer sep=0}]
-              \node[anchor=north west] at (current page.north west){\includegraphics[width=\paperwidth, page=\thepage]{\classdir /background.pdf}};
-            \end{tikzpicture}
-          }
+          % check if it's the first page
+          \ifthenelse{\thepage = 1}
+            {
+              % do nothing on the first page
+            }
+            {
+              % calculate the page number in the background PDF
+              \pgfmathtruncatemacro{\bgpage}{mod(\thepage - 1, \the\lastsavedimageresourcepages) + 1}
+              % add background
+              \begin{tikzpicture}[remember picture,overlay,every node/.style={inner sep=0,outer sep=0}]
+                \node[anchor=north west] at (current page.north west){\includegraphics[width=\paperwidth, page=\bgpage]{\classdir /background.pdf}};
+              \end{tikzpicture}
+            }
         }
     }
   }
+
 
 %% PDFLaTeX previous layout version
 %\AddToShipoutPictureBG{
