@@ -42,6 +42,9 @@
 %%%%%%%%%% PACKAGES %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\RequirePackage{amsmath} % Provides \nobreakdash (needed for some bib refs)
+\RequirePackage{amssymb} % needed for some bib refs
+\RequirePackage{array} % for tables content alignement
 \RequirePackage{babel} % Load babel (it will use the options passed above)
 \RequirePackage{booktabs} % provides table rules
 \RequirePackage{calc} % For length calculations
@@ -55,6 +58,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{ifthen}
 \RequirePackage{lastpage}
+\RequirePackage{letltxmacro} % For \LetLtxMacro
 \RequirePackage{lipsum}
 \RequirePackage{longtable}
 \RequirePackage{makecell}
@@ -66,13 +70,12 @@
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage{tikz}
 \RequirePackage{tikzpagenodes} % For accessing text area coordinates
+\RequirePackage{tipx}  % For phonetic symbols
 \RequirePackage{titlesec}
 \RequirePackage{url}
 
-\RequirePackage{letltxmacro} % For \LetLtxMacro
 
 % https://tex.stackexchange.com/questions/157389/how-to-center-column-values-in-a-table
-\RequirePackage{array} % for tables content alignement
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
 
