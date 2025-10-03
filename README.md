@@ -34,6 +34,7 @@ This work is dual-licensed under GPL 3.0 (GNU General Public License v3.0 only) 
 
 Design: Delphine Le Piolet, Laili Rahimie, Romain Thomas
 
+DOI: https://doi.org/10.5281/zenodo.17251825  
 Repository: https://github.com/dibiso-upsaclay/dibiso-latex-templates/
 
 Romain THOMAS 2025  
