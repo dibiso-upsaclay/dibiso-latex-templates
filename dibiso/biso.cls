@@ -39,16 +39,16 @@
 
 
 \newcommand{\makelastpagecontactus}{
-  \section*{Contactez-nous !}
+  \subsection*{Contactez-nous !}
 
-  Pour échanger à propos de ce rapport ou tout autre questions liées à la science ouverte et vos publications, n'hésitez pas à contacter votre \textbf{référent·e laboratoire :}
+  Pour échanger à propos de ce rapport ou tout autre questions liées à la science ouverte et vos publications, n'hésitez pas à contacter votre {\fontseries{sb}\selectfont référent·e laboratoire :}
 
   \ifx\@reporter\empty\else
     \thereporter
   \fi
   \ifx\@reporter\empty\else
     \ifx\@reporteremail\empty\else
-      \\
+      ~-
     \fi
   \fi
   \ifx\@reporteremail\empty\else
@@ -58,9 +58,9 @@
 
 
 \newcommand{\makelastpagedatasources}{
-  \section*{Source des données:}
+  \subsection*{Source des données:}
   
-  \begin{description}[leftmargin=0cm]
+  \begin{description}[leftmargin=0cm, font=\fontseries{sb}\selectfont]
     \conditionalitem{\href{https://hal.science/}{HAL}:}{fig_jorunals_hal,fig_conferences,fig_doc_type,fig_open_access_works,fig_collab_map,fig_collab_map_europe,fig_collab_names,fig_private_collab,fig_eu_projects,fig_anr_projects}{tab_chapters,tab_journals}
 
     \conditionalitem{\href{https://openalex.org/}{OpenAlex}:}{fig_collab_map,fig_collab_map_europe}{}
@@ -80,16 +80,30 @@
 }
 
 
+% icons from https://simpleicons.org/
 \newcommand{\makelastpagecode}{
-  \section*{Code:}
+  \subsection*{Code:}
+    {\fontseries{sb}\selectfont Analyses et visualisations:} \begin{description}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/pypi.eps}} ~ \href{https://pypi.org/project/dibisoplot/}{\texttt{dibisoplot}} v\dibisoplotversion
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/doi.eps}} ~ \href{https://doi.org/10.5281/zenodo.17251536}{\texttt{10.5281/zenodo.17251536}}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibisoplot}
+    \end{description}
+    {\fontseries{sb}\selectfont Modèle \LaTeX:} \begin{description}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/doi.eps}} ~ \href{https://doi.org/10.5281/zenodo.17251825}{\texttt{10.5281/zenodo.17251825}}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-latex-templates}
+    \end{description}
+    {\fontseries{sb}\selectfont Génération du rapport:} \begin{description}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/pypi.eps}} ~ \href{https://pypi.org/project/dibisoreporting/}{\texttt{dibisoreporting}} v\dibisoreportingversion
 
-  \begin{description}[leftmargin=0cm]
-    \item[Analyses et visualisations:] \url{https://github.com/dibiso-upsaclay/dibisoplot}
-    \item[Modèle \LaTeX:] \url{https://github.com/dibiso-upsaclay/dibiso-latex-templates}
-    \item[Génération du rapport:] \url{https://github.com/dibiso-upsaclay/dibisoreporting}
-    \item[Application web:] \url{https://github.com/dibiso-upsaclay/dibiso-reporting-webapp}
-    \item[API app web:] \url{https://github.com/dibiso-upsaclay/dibiso-reporting-api}
-  \end{description}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/doi.eps}} ~ \href{https://doi.org/10.5281/zenodo.17251577}{\texttt{10.5281/zenodo.17251577}}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibisoreporting}
+    \end{description}
+    {\fontseries{sb}\selectfont API application web:} \begin{description}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-reporting-api}
+    \end{description}
+    {\fontseries{sb}\selectfont Application web:} \begin{description}
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-reporting-webapp}
+    \end{description}
 }
 
 
@@ -108,7 +122,7 @@
   \vfill
   
   \raggedright
-  {\Large\titlefont\bfseries L'équipe Science Ouverte}
+  {\Large\titlefont\fontseries{sb}\selectfont L'équipe Science Ouverte}
   \begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
     \node[shading=axis, rounded rectangle, left color=titlepagegradientcolora, right color=titlepagegradientcolorb, shading angle=90, minimum width=\textwidth, minimum height=\logorulewidth] {};
   \end{tikzpicture}
@@ -162,6 +176,8 @@
 
 \newcommand{\makelastpagereport}{
   \pagebreak
+  \small
+  \vspace*{-15mm}
   
   \thispagestyle{empty}
   
@@ -179,10 +195,12 @@
 
 \newcommand{\makelastpagebiblio}{
   \pagebreak
+  \small
+  \vspace*{-15mm}
   
   \thispagestyle{empty}
   
-  \section*{Source des données:}
+  \subsection*{Source des données:}
   \begin{description}
     \item[\href{https://hal.science/}{HAL}:] Références
   \end{description}

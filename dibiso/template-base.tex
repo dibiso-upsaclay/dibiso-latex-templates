@@ -70,6 +70,7 @@
 \RequirePackage{tikzpagenodes} % For accessing text area coordinates
 \RequirePackage{tipx}  % For phonetic symbols
 \RequirePackage{titlesec}
+\RequirePackage{tocloft}
 \RequirePackage{url}
 
 
@@ -241,6 +242,10 @@
 \DeclareRobustCommand\titleleftlogo[1]{\gdef\@titleleftlogo{#1}}
 \titleleftlogo{assets/logo.eps}
 
+%% change table of content font
+\renewcommand{\cftsecfont}{\fontseries{sb}\selectfont}
+\renewcommand{\cftsecpagefont}{\fontseries{sb}\selectfont}
+\renewcommand{\cfttoctitlefont}{\sectiontitlecolor\LARGE\fontseries{b}\selectfont}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -422,6 +427,17 @@
   \LetLtxMacro{\section}{\extendedsection}
 }
 
+% set subsections style
+\titleformat{\subsection}
+  {\sectiontitlecolor\Large\fontseries{b}\selectfont} % Format of the subsection title
+  {\thesubsection} % Subsection number
+  {0.8em} % Space between the number and the title
+  {} % Code before the title
+
+\titlespacing*{\subsection}
+  {0pt}
+  {2ex}
+  {.7ex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
