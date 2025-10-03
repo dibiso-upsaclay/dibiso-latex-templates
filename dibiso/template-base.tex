@@ -55,14 +55,12 @@
 \RequirePackage[bottom]{footmisc}
 \RequirePackage{geometry}
 \RequirePackage{graphicx}
-\RequirePackage{hyperref}
 \RequirePackage{ifthen}
 \RequirePackage{lastpage}
 \RequirePackage{letltxmacro} % For \LetLtxMacro
 \RequirePackage{lipsum}
 \RequirePackage{longtable}
 \RequirePackage{makecell}
-\RequirePackage{orcidlink}
 \RequirePackage{parskip}
 \RequirePackage{pgfplots}
 \RequirePackage{setspace}
@@ -446,3 +444,9 @@
     }
   \fi
 }
+
+
+% load hyperref after all other packages to avoid conflicts that make footnotes to point to the last page
+\RequirePackage{hyperref}
+% as orcidlink loads hyperref, loads it after hyperref
+\RequirePackage{orcidlink}
