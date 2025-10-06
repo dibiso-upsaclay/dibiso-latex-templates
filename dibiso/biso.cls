@@ -83,25 +83,25 @@
 % icons from https://simpleicons.org/
 \newcommand{\makelastpagecode}{
   \subsection*{Code:}
-    {\fontseries{sb}\selectfont Analyses et visualisations:} \begin{description}
+    {\fontseries{sb}\selectfont Analyses et visualisations:} \begin{description}[labelsep=2ex]
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/pypi.eps}} ~ \href{https://pypi.org/project/dibisoplot/}{\texttt{dibisoplot}} v\dibisoplotversion
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/doi.eps}} ~ \href{https://doi.org/10.5281/zenodo.17251536}{\texttt{10.5281/zenodo.17251536}}
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibisoplot}
     \end{description}
-    {\fontseries{sb}\selectfont Modèle \LaTeX:} \begin{description}
+    {\fontseries{sb}\selectfont Modèle \LaTeX:} \begin{description}[labelsep=2ex]
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/doi.eps}} ~ \href{https://doi.org/10.5281/zenodo.17251825}{\texttt{10.5281/zenodo.17251825}}
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-latex-templates}
     \end{description}
-    {\fontseries{sb}\selectfont Génération du rapport:} \begin{description}
+    {\fontseries{sb}\selectfont Génération du rapport:} \begin{description}[labelsep=2ex]
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/pypi.eps}} ~ \href{https://pypi.org/project/dibisoreporting/}{\texttt{dibisoreporting}} v\dibisoreportingversion
 
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/doi.eps}} ~ \href{https://doi.org/10.5281/zenodo.17251577}{\texttt{10.5281/zenodo.17251577}}
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibisoreporting}
     \end{description}
-    {\fontseries{sb}\selectfont API application web:} \begin{description}
+    {\fontseries{sb}\selectfont API application web:} \begin{description}[labelsep=2ex]
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-reporting-api}
     \end{description}
-    {\fontseries{sb}\selectfont Application web:} \begin{description}
+    {\fontseries{sb}\selectfont Application web:} \begin{description}[labelsep=2ex]
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-reporting-webapp}
     \end{description}
 }
