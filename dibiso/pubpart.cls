@@ -158,7 +158,7 @@
   
   \subsection*{Source des données:}
   \begin{description}
-    \item[\href{https://hal.science/}{HAL}:] Références
+    \item[\href{https://openalex.org/}{OpenAlex}:] Références
   \end{description}
   \vspace{-1ex}
   Données téléchargées le : \datafetchdate
