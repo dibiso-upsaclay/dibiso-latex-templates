@@ -14,6 +14,8 @@
 
 \newcommand{\templatetype}{article}
 
+\newcommand{\titlepagelabellogo}{label-science-ouverte.pdf}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% IMPORTS %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

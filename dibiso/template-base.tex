@@ -295,7 +295,13 @@
       % logo:
       \node [anchor=north west, xshift=\logoxpos, yshift=\logoypos] (logo) at (current page.south west) {\includegraphics[width=\logomaxw, height=\logomaxh, keepaspectratio]{\classdir /logo.eps}};
       % label:
-      \node [anchor=north east, xshift=-\labelxpos, yshift=-\labelypos] (label) at (current page.north east) {\includegraphics[width=\labelmaxw, height=\labelmaxh, keepaspectratio]{\classdir /label-science-ouverte.pdf}};
+%      \node [anchor=north east, xshift=-\labelxpos, yshift=-\labelypos] (label) at (current page.north east) {\includegraphics[width=\labelmaxw, height=\labelmaxh, keepaspectratio]{\classdir /label-science-ouverte.pdf}};
+      \@ifundefined{titlepagelabellogo}{%
+        % Do nothing if \titlepageupperlogo is not defined
+      }{%
+        % Show the logo if \titlepageupperlogo is defined
+        \node [anchor=north east, xshift=-\labelxpos, yshift=-\labelypos] (label) at (current page.north east) {\includegraphics[width=\labelmaxw, height=\labelmaxh, keepaspectratio]{\classdir /\titlepagelabellogo}};
+      }
       % date:
       \node [anchor=south west, xshift=\datexshift, yshift=\dateyshift] (date) at (logo.north east){\datefontsize\fontseries{b}\selectfont\titlecolor \@date \par};
       % title:
