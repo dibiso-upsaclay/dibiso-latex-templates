@@ -336,6 +336,10 @@
 %%%%%%%%%% BACKGROUND %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Define a boolean variable to control the background
+\newboolean{backgroundenabled}
+\setboolean{backgroundenabled}{true} % Set to false to disable the background
+
 % Add the background to every page until running out of pages in the background page
 % reset titlepage environment to start page numbering on title page
 \renewenvironment{titlepage}
@@ -352,19 +356,23 @@
           \makelastpage
         }
         {
-          % check if it's the first page
-          \ifthenelse{\thepage = 1}
-            {
-              % do nothing on the first page
-            }
-            {
-              % calculate the page number in the background PDF
-              \pgfmathtruncatemacro{\bgpage}{mod(\thepage - 1, \the\lastsavedimageresourcepages) + 1}
-              % add background
-              \begin{tikzpicture}[remember picture,overlay,every node/.style={inner sep=0,outer sep=0}]
-                \node[anchor=north west] at (current page.north west){\includegraphics[width=\paperwidth, page=\bgpage]{\classdir /background.pdf}};
-              \end{tikzpicture}
-            }
+          \ifthenelse{\boolean{backgroundenabled}}
+          {
+            % check if it's the first page
+            \ifthenelse{\thepage = 1}
+              {
+                % do nothing on the first page
+              }
+              {
+                % calculate the page number in the background PDF
+                \pgfmathtruncatemacro{\bgpage}{mod(\thepage - 1, \the\lastsavedimageresourcepages) + 1}
+                % add background
+                \begin{tikzpicture}[remember picture,overlay,every node/.style={inner sep=0,outer sep=0}]
+                  \node[anchor=north west] at (current page.north west){\includegraphics[width=\paperwidth, page=\bgpage]{\classdir /background.pdf}};
+                \end{tikzpicture}
+              }
+          }
+          {} % do nothing if background is disabled
         }
     }
   }
