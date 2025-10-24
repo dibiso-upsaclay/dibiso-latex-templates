@@ -27,6 +27,9 @@ authors:
     orcid: 'https://orcid.org/0009-0006-9124-2065'
     affiliation: Université Paris-Saclay
 repository-code: 'https://github.com/dibiso-upsaclay/dibiso-latex-templates'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17251825
 abstract: >-
   LaTeX templates used by the DiBISO at the Université
   Paris-Saclay to generate reports.
