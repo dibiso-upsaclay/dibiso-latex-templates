@@ -32,7 +32,7 @@ To compile the templates, you need to use LuaLaTeX.
 
 This work is dual-licensed under GPL 3.0 (GNU General Public License v3.0 only) or LPPL 1.3c (LaTeX Project Public License v1.3c). You can choose between one of them if you use this work.
 
-Design: Delphine Le Piolet, Laili Rahimie, Romain Thomas
+Design: Henri Bretel, Robin Millman, Delphine Le Piolet, Laili Rahimie, Romain Thomas
 
 DOI: https://doi.org/10.5281/zenodo.17251825  
 Repository: https://github.com/dibiso-upsaclay/dibiso-latex-templates/
