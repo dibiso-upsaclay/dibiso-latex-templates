@@ -8,8 +8,9 @@ License: LPPL 1.3c or GPL 3.0
 
 This repository contains the following templates:
 
-  - `BISO`: Bilan de la Science Ouverte (open-science report)
-  
+  - `BiSO`: Bilan de la Science Ouverte (open-science report)
+  - `PubPart`: Publications & Partnerships
+
   
 ## Usage
 
@@ -24,7 +25,12 @@ To compile the templates, you need to use LuaLaTeX.
 
 ### BiSO
 
-[![report example](docs/images/biso-example/biso-example.png)](examples/biso/biso-main.pdf)
+[![BiSO report example](docs/images/biso-example/biso-example.png)](examples/biso/biso-main.pdf)
+
+
+### PubPart
+
+[![PubPart report example](docs/images/pubpart-example/pubpart-example.png)](examples/pubpart/pubpart-main.pdf)
 
 
 
@@ -35,7 +41,8 @@ This work is dual-licensed under GPL 3.0 (GNU General Public License v3.0 only) 
 Design: Henri Bretel, Robin Millman, Delphine Le Piolet, Laili Rahimie, Romain Thomas
 
 DOI: https://doi.org/10.5281/zenodo.17251825  
-Repository: https://github.com/dibiso-upsaclay/dibiso-latex-templates/
+Repository: https://github.com/dibiso-upsaclay/dibiso-latex-templates/  
+Technical report: https://universite-paris-saclay.hal.science/hal-05336463
 
 Romain THOMAS 2025  
 DiBISO (Direction des Bibliothèques, de l'Information et de la Science Ouverte)  
