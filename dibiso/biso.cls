@@ -106,6 +106,9 @@
     {\fontseries{sb}\selectfont Application web:} \begin{description}[labelsep=2ex]
       \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/github.eps}} ~ \url{https://github.com/dibiso-upsaclay/dibiso-reporting-webapp}
     \end{description}
+    {\fontseries{sb}\selectfont Rapport technique:} \begin{description}[labelsep=2ex]
+      \item \raisebox{-0.2\baselineskip}{\includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/hal.eps}} ~ \url{https://universite-paris-saclay.hal.science/hal-05336463}
+    \end{description}
 }
 
 
