@@ -109,11 +109,11 @@
     \node[shading=axis, rounded rectangle, left color=titlepagegradientcolora, right color=titlepagegradientcolorb, shading angle=90, minimum width=\textwidth, minimum height=\logorulewidth] {};
   \end{tikzpicture}
   
-  \vspace{5mm}
+  \vspace{2mm}
   
   \includegraphics[width=\linewidth]{\classdir /frise_upsaclay.eps}
   
-  \vspace{5mm}
+  \vspace{2mm}
   
   \newcommand{\licenceslogo}{
     \href{https://creativecommons.org/licenses/by/4.0/}{\includegraphics[height=\the\dimexpr 2\baselineskip \relax]{\classdir /icons/by.eps}}

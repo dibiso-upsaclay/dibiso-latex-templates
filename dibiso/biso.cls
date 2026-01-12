@@ -134,11 +134,11 @@
   
   \begin{minipage}{8cm}
     \small
-    \medskip
+    \smallskip
     
     \href{mailto:science.ouverte@universite-paris-saclay.fr}{science.ouverte@universite-paris-saclay.fr}
     
-    \medskip
+    \smallskip
     
     \url{https://www.universite-paris-saclay.fr/recherche/science-ouverte}
   \end{minipage}
@@ -148,16 +148,16 @@
     % https://simpleicons.org/
     \includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/bluesky.eps} ~ \href{https://bsky.app/profile/so-upsaclay.bsky.social}{@so-upsaclay.bsky.social}
     
-    \medskip
+    \smallskip
     
     \includegraphics[height=\the\baselineskip, width=\the\baselineskip, keepaspectratio]{\classdir /icons/mastodon.eps} ~ \href{https://social.sciences.re/@SO_UPSaclay}{social.sciences.re/@SO\_UPSaclay}
   \end{minipage}
   
-  \vspace{5mm}
+  \vspace{2mm}
   
   \includegraphics[width=\linewidth]{\classdir /frise_upsaclay.eps}
   
-  \vspace{5mm}
+  \vspace{2mm}
   
   \newcommand{\licenceslogo}{
     \href{https://creativecommons.org/licenses/by/4.0/}{\includegraphics[height=\the\dimexpr 2\baselineskip \relax]{\classdir /icons/by.eps}}
